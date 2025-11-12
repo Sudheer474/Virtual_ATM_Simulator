@@ -45,7 +45,7 @@ public class Card {
     @Column(nullable = false)
     private CardStatus status; // ACTIVE, BLOCKED, EXPIRED
 
-    // 🧩 Relationship: One card belongs to one account
+    //Relationship: One card belongs to one account
     @OneToOne
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;
