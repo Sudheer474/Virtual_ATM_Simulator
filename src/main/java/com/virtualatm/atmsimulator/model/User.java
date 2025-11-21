@@ -8,7 +8,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -43,9 +46,12 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Account> accounts;
 
-    // In real app, we’d also add audit fields
-    // @CreationTimestamp private LocalDateTime createdAt;
-    // @UpdateTimestamp private LocalDateTime updatedAt;
+    // In real app, we would also add audit fields
+     @CreationTimestamp
+     private LocalDateTime createdAt;
+
+     @UpdateTimestamp
+     private LocalDateTime updatedAt;
 
 
 }
