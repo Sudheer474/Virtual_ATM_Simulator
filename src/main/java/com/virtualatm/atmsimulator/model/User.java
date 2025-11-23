@@ -47,11 +47,11 @@ public class User {
     private List<Account> accounts;
 
     // In real app, we would also add audit fields
-     @CreationTimestamp
-     private LocalDateTime createdAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 
-     @UpdateTimestamp
-     private LocalDateTime updatedAt;
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 
 
 }

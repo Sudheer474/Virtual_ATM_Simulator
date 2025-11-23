@@ -11,5 +11,5 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     List<Transaction> findByAccountId(Long accountId);
     List<Transaction> findByType(TransactionType type);
     List<Transaction> findByStatus(TransactionStatus status);
-
+    List<Transaction> findTop10ByAccountIdOrderByTransactionTimeDesc(Long accountId);
 }

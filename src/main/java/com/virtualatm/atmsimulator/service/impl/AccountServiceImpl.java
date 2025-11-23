@@ -7,6 +7,7 @@ import com.virtualatm.atmsimulator.exception.global.InvalidInputException;
 import com.virtualatm.atmsimulator.exception.user.UserNotFoundException;
 import com.virtualatm.atmsimulator.model.Account;
 import com.virtualatm.atmsimulator.model.Transaction;
+import com.virtualatm.atmsimulator.model.User;
 import com.virtualatm.atmsimulator.model.enums.AccountStatus;
 import com.virtualatm.atmsimulator.model.enums.AccountType;
 import com.virtualatm.atmsimulator.model.enums.TransactionStatus;

@@ -1,23 +1,21 @@
 package com.virtualatm.atmsimulator.service;
 
-import com.virtualatm.atmsimulator.dto.UserDTO;
+import com.virtualatm.atmsimulator.dto.user.UserDTO;
+import com.virtualatm.atmsimulator.dto.user.CreateUserRequest;
+import com.virtualatm.atmsimulator.dto.user.UpdateUserRequest;
+import com.virtualatm.atmsimulator.dto.user.UserDTO;
 import com.virtualatm.atmsimulator.model.User;
 
 import java.util.List;
 
 public interface UserService {
+    UserDTO createUser(CreateUserRequest req);
+    UserDTO getUserById(Long id);
+    List<UserDTO> getAllUsers();
+    UserDTO updateUser(Long id, UpdateUserRequest req);
+    void deleteUser(Long id);
 
-    User createUser(UserDTO userDTO);
+//    UserDTO getUserByEmail(String email);
+//    void changePassword(Long userId, String oldPassword, String newPassword);
 
-    User getUserById(Long userId);
-
-    User getUserByEmail(String email);
-
-    User updateUser(Long userId, UserDTO userDTO);
-
-    void deleteUser(Long userId); // soft delete
-
-    List<User> getAllUsers();
-
-    void changePassword(Long userId, String oldPassword, String newPassword);
 }
