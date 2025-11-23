@@ -1,9 +1,9 @@
-package com.virtualatm.atmsimulator.dto;
+package com.virtualatm.atmsimulator.dto.user;
 
 import lombok.Data;
 
 @Data
-public class UserDTO {
+public class CreateUserRequest {
     private String fullName;
     private String email;
     private String phoneNumber;
