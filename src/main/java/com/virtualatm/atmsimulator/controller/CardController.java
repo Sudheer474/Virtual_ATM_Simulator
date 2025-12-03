@@ -19,10 +19,7 @@ public class CardController {
 
     // Issue Card
     @PostMapping("/{accountId}/issue")
-    public ResponseEntity<CardDTO> issueCard(
-            @PathVariable Long accountId,
-            @RequestBody(required = false) IssueCardRequest request
-    ) {
+    public ResponseEntity<CardDTO> issueCard(@PathVariable Long accountId, @RequestBody(required = false) IssueCardRequest request) {
         String pin = (request != null) ? request.getPin() : null;
         Card card = cardService.issueCard(accountId, pin);
         return ResponseEntity.ok(toDTO(card));
