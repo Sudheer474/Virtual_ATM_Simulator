@@ -10,7 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Component
+//@Component : This will automatically run when springboot application starts because this class implements
+//CommandLineRunner/ApplicationRunner
 public class DbTestRunner implements CommandLineRunner {
 
     private final UserRepository userRepository;

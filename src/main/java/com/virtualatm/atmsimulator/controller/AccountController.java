@@ -1,6 +1,7 @@
 package com.virtualatm.atmsimulator.controller;
 
 import com.virtualatm.atmsimulator.dto.account.AccountResponse;
+import com.virtualatm.atmsimulator.model.Account;
 import com.virtualatm.atmsimulator.model.enums.AccountType;
 import com.virtualatm.atmsimulator.service.AccountService;
 import lombok.RequiredArgsConstructor;
@@ -75,7 +76,7 @@ public class AccountController {
     }
 
     // DTO Mapper
-    private AccountResponse mapToResponse(com.virtualatm.atmsimulator.model.Account acc) {
+    private AccountResponse mapToResponse(Account acc) {
         AccountResponse resp = new AccountResponse();
         resp.setAccountId(acc.getId());
         resp.setBalance(acc.getBalance().doubleValue());
